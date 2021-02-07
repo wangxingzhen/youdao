@@ -14,8 +14,8 @@ import (
 )
 
 const (
-	yDUrl    = "https://openapi.youdao.com/api" //有道api地址
-	signType = "v3"
+	yDUrl    = "https://openapi.youdao.com/api"   //有道api地址
+	signType = "v3"                               //签名版本
 	uuid     = "WANGXINGZHEN"                     //用户id
 	key      = "FlZf4CmGEmqTqGBHHFxjJNE7rbFvTCej" //密钥
 	appKey   = "40e8d82033e12c08"                 //应用ID

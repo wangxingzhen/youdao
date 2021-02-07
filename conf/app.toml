@@ -1,0 +1,8 @@
+[app]
+YouDaoUrl = "https://openapi.youdao.com/api"
+YouDaoAppID = "40e8d82033e12c08"
+YouDaoAppKey = "FlZf4CmGEmqTqGBHHFxjJNE7rbFvTCej"
+
+[web]
+host = "0.0.0.0"
+port = "11111"
