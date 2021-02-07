@@ -12,7 +12,7 @@ import (
 func main() {
 	r := gin.Default()
 	routers.Init(r)
-	EndLessServer(":11111", r)
+	EndLessServer("127.0.0.1:11111", r)
 }
 
 func EndLessServer(addr string, r *gin.Engine) {
