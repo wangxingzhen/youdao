@@ -8,6 +8,7 @@ require (
 	github.com/json-iterator/go v1.1.10
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.7.0
+	github.com/spf13/viper v1.7.1
 	github.com/thinkeridea/go-extend v1.2.2
 	github.com/valyala/fasthttp v1.19.0
 )

@@ -8,7 +8,11 @@ import (
 )
 
 func YouDao(ctx *gin.Context) {
-	params := &server.FYReq{}
+
+	params := &server.FYReq{
+		Ip: ctx.ClientIP(), //获取客户端ip,用来当作用户唯一id
+	}
+
 	err := ctx.ShouldBindJSON(params)
 	if err != nil {
 		util.ErrorReturn(ctx, util.LackParameter, err.Error())

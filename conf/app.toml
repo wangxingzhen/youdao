@@ -1,8 +1,13 @@
-[app]
+[app.youDao]
+#有道的翻译地址，不需要修改
 YouDaoUrl = "https://openapi.youdao.com/api"
-YouDaoAppID = "40e8d82033e12c08"
-YouDaoAppKey = "FlZf4CmGEmqTqGBHHFxjJNE7rbFvTCej"
+#应用ID
+YouDaoAppID = "xxxxxxxxxxxxx"
+#应用密钥
+YouDaoAppKey = "xxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 [web]
-host = "0.0.0.0"
+#监听的地址，如果通过nginx进行转发的话，这里应设置为127.0.0.1,如果直接使用go当作web服务器的话，这里应为0.0.0.0
+host = "127.0.0.1"
+#监听的端口号
 port = "11111"

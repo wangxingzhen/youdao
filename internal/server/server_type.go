@@ -26,4 +26,5 @@ type Web struct {
 
 type FYReq struct {
 	Content string `json:"content" form:"content" binding:"required"`
+	Ip      string
 }
