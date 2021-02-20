@@ -14,14 +14,21 @@
 
 ## 接口说明
 
-地址
-```fanyi/youdao```
+**地址**
+- `fanyi/youdao`
 
-请求方式 POST (JSON形式)
+**请求方式**
+- POST (JSON形式)
 
-请求参数 ```content``` 待翻译的文本
+**请求参数**
 
-返回参数 接口文档[看这里](https://ai.youdao.com/DOCSIRMA/html/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%BF%BB%E8%AF%91/API%E6%96%87%E6%A1%A3/%E6%96%87%E6%9C%AC%E7%BF%BB%E8%AF%91%E6%9C%8D%E5%8A%A1/%E6%96%87%E6%9C%AC%E7%BF%BB%E8%AF%91%E6%9C%8D%E5%8A%A1-API%E6%96%87%E6%A1%A3.html)
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|content |是  |string |待翻译的文本   |
+
+**返回参数** 
+
+**参数说明[看这里](https://ai.youdao.com/DOCSIRMA/html/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%BF%BB%E8%AF%91/API%E6%96%87%E6%A1%A3/%E6%96%87%E6%9C%AC%E7%BF%BB%E8%AF%91%E6%9C%8D%E5%8A%A1/%E6%96%87%E6%9C%AC%E7%BF%BB%E8%AF%91%E6%9C%8D%E5%8A%A1-API%E6%96%87%E6%A1%A3.html)**
 ```shell
 {
     "code": 0,
