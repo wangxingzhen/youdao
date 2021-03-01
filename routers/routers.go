@@ -9,6 +9,7 @@ import (
 
 func Init(r *gin.Engine) {
 	//记录接口执行时间
+	r.Use(middleware.TryCatch())
 	r.Use(middleware.RecordingTime())
 	//心跳
 	r.GET("/ping", func(ctx *gin.Context) {
