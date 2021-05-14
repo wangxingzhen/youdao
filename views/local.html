@@ -12,7 +12,7 @@
 </head>
 <body>
 <div style="width: 800px;height: 600px;margin: 30px auto;text-align: center">
-    <h1>www.5lmh.comy演示聊天室</h1>
+    <h1>演示聊天室</h1>
     <div style="width: 800px;border: 1px solid gray;height: 300px;">
         <div style="width: 200px;height: 300px;float: left;text-align: left;">
             <p><span>当前在线:</span><span id="user_num">0</span></p>
@@ -30,7 +30,7 @@
 </html>
 <script type="text/javascript">
     var uname = prompt('请输入用户名', 'user' + uuid(8, 16));
-    var ws = new WebSocket("ws://127.0.0.1:8080/ws");
+    var ws = new WebSocket("ws://"+window.location.hostname+":10000/ws");
     ws.onopen = function () {
         var data = "系统消息：建立连接成功";
         listMsg(data);
