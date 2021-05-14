@@ -3,8 +3,6 @@ package routers
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"os"
-	"path/filepath"
 	"youdao/internal/handler"
 	"youdao/middleware"
 )
@@ -23,7 +21,7 @@ func Init(r *gin.Engine) {
 		yd.POST("/youdao", handler.YouDao)
 	}
 
-	r.LoadHTMLGlob(filepath.Join(os.Getenv("GOPATH"), "src/youdao/views/*"))
+	r.LoadHTMLGlob("views/*")
 	r.GET("/local", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "local.html", gin.H{})
 	})
