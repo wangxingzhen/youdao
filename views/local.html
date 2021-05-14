@@ -30,7 +30,7 @@
 </html>
 <script type="text/javascript">
     var uname = prompt('请输入用户名', 'user' + uuid(8, 16));
-    var ws = new WebSocket("ws://"+window.location.hostname+":11112/ws");
+    var ws = new WebSocket("ws://"+window.location.hostname+"/ws");
     ws.onopen = function () {
         var data = "系统消息：建立连接成功";
         listMsg(data);
