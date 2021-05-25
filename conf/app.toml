@@ -11,3 +11,15 @@ YouDaoAppKey = "xxxxxxxxxxxxxxxxxxxxxxxxxx"
 host = "127.0.0.1"
 #监听的端口号
 port = "11111"
+
+[app.database]
+#数据库地址
+host = "192.168.0.170"
+#端口号
+port = "3306"
+#用户名
+username = "root"
+#密码
+password = "123456"
+#数据库名
+database_name = "test"

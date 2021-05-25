@@ -19,5 +19,7 @@ func Init(r *gin.Engine) {
 	yd := r.Group("fanyi")
 	{
 		yd.POST("/youdao", handler.YouDao)
+		yd.GET("/test", handler.Test)
+		yd.GET("/goroutine", handler.GetGoroutine)
 	}
 }

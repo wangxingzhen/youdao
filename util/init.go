@@ -10,10 +10,13 @@ import (
 	"time"
 )
 
+// HookLoad 钩子加载
+var HookLoad []func()
+
 //配置文件的目录
 const _confPath = "./conf"
 
-//初始化配置文件
+// InitConf 初始化配置文件
 func InitConf() {
 	//设置配置文件类型
 	viper.SetConfigType("toml")
@@ -38,9 +41,17 @@ func InitConf() {
 	return
 }
 
-//添加平滑重启，监听端口
+// ReloadHookFunc 动态加载
+func ReloadHookFunc() {
+	for _, f := range HookLoad {
+		f()
+	}
+}
+
+// EndLessServer 添加平滑重启，监听端口
 func EndLessServer(addr string, r *gin.Engine) {
 
+	endless.DefaultHammerTime = time.Second * 10 //收到kill命令后给出10秒的处理时间，若10秒内没处理完则强行停止
 	endless.DefaultReadTimeOut = time.Second * 20
 	endless.DefaultWriteTimeOut = time.Second * 20
 	endless.DefaultMaxHeaderBytes = 1 << 20
